@@ -22,7 +22,7 @@ class MainHeaderViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet private weak var sendUrlButton: UIButton!
     private var authorizationToken = ""
     
-    var url: URL?
+    var url: URLObject?
 
     override func viewDidLoad() {
         super.viewDidLoad()

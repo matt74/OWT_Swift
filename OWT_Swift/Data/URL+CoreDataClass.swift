@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class URL:NSManagedObject {
+class URLObject:NSManagedObject {
     
     var uid: String?
     var date: Date?

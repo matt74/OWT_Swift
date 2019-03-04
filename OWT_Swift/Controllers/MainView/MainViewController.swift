@@ -74,6 +74,12 @@ class MainViewController:UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let urlFromObject = dataArray[indexPath.row] as! NSManagedObject
+        let urlString = urlFromObject.value(forKey: "url") as? String
+        
+        guard let url = URL(string: urlString ?? "") else { return }
+        UIApplication.shared.open(url)
     }
 
     func highlightCell() {
